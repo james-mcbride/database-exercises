@@ -8,4 +8,4 @@ SELECT DISTINCT first_name,last_name FROM employees WHERE last_name LIKE '%E' AN
 
 SELECT  COUNT(DISTINCT last_name) from employees where last_name like '%q%' AND last_name NOT LIKE '%qu%';
 
-SELECT CONCAT(count(*), gender) FROM employees WHERE first_name IN ('Irena','Vidya','Maya' )  GROUP BY gender;
+SELECT * FROM employees WHERE first_name IN ('Irena','Vidya','Maya' )  GROUP BY first_name;

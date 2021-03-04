@@ -66,23 +66,21 @@ join Ad on users.user_id = Ad.user_id
 join Ad_Categories AC on Ad.ad_id = AC.ad_id
 join categories c on c.category_id=ac.category_id;
 
-SELECT Ad.description as 'Description', c.category
+SELECT Ad.ad_id as 'Ad Number',Ad.description as 'Description', c.category
 from Ad
          join Ad_Categories AC on Ad.ad_id = AC.ad_id
          join categories c on c.category_id=ac.category_id
 WHERE Ad.ad_id=2;
 
-SELECT Ad.description as 'Description', c.category
+SELECT Ad.ad_id as 'Ad Number',Ad.description as 'Description', c.category
 from Ad
          join Ad_Categories AC on Ad.ad_id = AC.ad_id
          join categories c on c.category_id=ac.category_id
 WHERE c.category_id=6;
 
-SELECT users.email AS 'email', Ad.description as 'Description', c.category
+SELECT Ad.ad_id as 'Ad Number',users.email AS 'email', Ad.description as 'Description'
 from users
          join Ad on users.user_id = Ad.user_id
-         join Ad_Categories AC on Ad.ad_id = AC.ad_id
-         join categories c on c.category_id=ac.category_id
 WHERE users.user_id=1
 
 
